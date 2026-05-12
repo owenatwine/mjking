@@ -1,0 +1,291 @@
+style.css
+/* GENERAL */
+*{
+    Margin:0;
+    Padding:0;
+    Box-sizing:border-box;
+    Font-family:Arial;
+}
+
+Body{
+    Background:#f5f5f5;
+}
+
+/* HEADER */
+Header{
+    Background:#001f5b;
+    Color:white;
+    Display:flex;
+    Justify-content:space-between;
+    Align-items:center;
+    Padding:20px 50px;
+}
+
+.logo h1{
+    Font-size:35px;
+}
+
+.logo p{
+    Letter-spacing:3px;
+}
+
+/* NAVIGATION */
+Nav a{
+    Color:white;
+    Text-decoration:none;
+    Margin-left:30px;
+    Font-size:18px;
+    Position:relative;
+    Transition:0.3s;
+}
+
+Nav a::after{
+    Content:””;
+    Width:0%;
+    Height:2px;
+    Background:white;
+    Position:absolute;
+    Left:0;
+    Bottom:-5px;
+    Transition:0.4s;
+}
+
+Nav a:hover::after{
+    Width:100%;
+}
+
+.active{
+    Border-bottom:2px solid white;
+}
+
+/* HERO */
+.hero{
+    Background:url(‘https://images.unsplash.com/photo-1562774053-701939374585’)
+    Center/cover no-repeat;
+
+    Height:450px;
+}
+
+.course-hero{
+    Background:url(‘https://images.unsplash.com/photo-1523050854058-8df90110c9f1’)
+    Center/cover no-repeat;
+
+    Height:250px;
+}
+
+.overlay{
+    Width:100%;
+    Height:100%;
+    Background:rgba(0,0,50,0.6);
+    Display:flex;
+    Flex-direction:column;
+    Justify-content:center;
+    Padding-left:60px;
+    Color:white;
+}
+
+/* HERO TEXT ANIMATION */
+.hero-text{
+    Animation:slideUp 2s ease;
+}
+
+.hero-text h2,
+.course-hero h2{
+    Font-size:50px;
+    Margin-bottom:20px;
+}
+
+.hero-text p,
+.course-hero p{
+    Width:500px;
+    Line-height:1.6;
+    Font-size:18px;
+}
+
+/* BUTTON */
+.btn{
+    Display:inline-block;
+    Margin-top:20px;
+    Background:#001f5b;
+    Color:white;
+    Padding:14px 24px;
+    Text-decoration:none;
+    Border-radius:5px;
+    Transition:0.4s;
+}
+
+.btn:hover{
+    Background:white;
+    Color:#001f5b;
+    Transform:scale(1.1);
+}
+
+/* ABOUT */
+.about{
+    Padding:60px 30px;
+    Text-align:center;
+}
+
+.about h2{
+    Color:#001f5b;
+    Margin-bottom:20px;
+    Font-size:40px;
+}
+
+.about-text{
+    Max-width:700px;
+    Margin:auto;
+    Line-height:1.7;
+}
+
+/* CARDS */
+.cards{
+    Display:flex;
+    Justify-content:center;
+    Flex-wrap:wrap;
+    Gap:25px;
+    Margin-top:50px;
+}
+
+.card{
+    Background:white;
+    Width:280px;
+    Padding:30px;
+    Border-radius:10px;
+    Box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    Transition:0.4s;
+}
+
+.card:hover{
+    Transform:translateY(-10px);
+}
+
+.card i{
+    Font-size:45px;
+    Color:#001f5b;
+    Margin-bottom:20px;
+}
+
+/* COURSES */
+.courses{
+    Display:grid;
+    Grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    Gap:30px;
+    Padding:50px;
+}
+
+.course-card{
+    Background:white;
+    Border-radius:10px;
+    Overflow:hidden;
+    Box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    Transition:0.4s;
+}
+
+.course-card:hover{
+    Transform:translateY(-10px) scale(1.02);
+}
+
+.course-card img{
+    Width:100%;
+    Height:220px;
+    Object-fit:cover;
+}
+
+.content{
+    Padding:20px;
+}
+
+.content h3{
+    Margin-bottom:10px;
+    Color:#001f5b;
+}
+
+.content p{
+    Line-height:1.6;
+}
+
+.content a{
+    Display:inline-block;
+    Margin-top:15px;
+    Text-decoration:none;
+    Color:#001f5b;
+    Font-weight:bold;
+}
+
+/* FOOTER */
+Footer{
+    Background:#001f5b;
+    Color:white;
+    Display:flex;
+    Justify-content:space-between;
+    Align-items:center;
+    Padding:20px 40px;
+}
+
+.footer-left i{
+    Font-size:30px;
+}
+
+/* CONTACT LINKS */
+.contact-info a{
+    Color:white;
+    Text-decoration:none;
+    Transition:0.3s;
+}
+
+.contact-info a:hover{
+    Color:gold;
+}
+
+/* SOCIALS */
+.socials a{
+    Color:white;
+    Margin-left:15px;
+    Font-size:22px;
+    Transition:0.4s;
+}
+
+.socials a:hover{
+    Color:gold;
+    Transform:translateY(-5px);
+}
+
+/* ANIMATION */
+@keyframes slideUp{
+
+    From{
+        Opacity:0;
+        Transform:translateY(50px);
+    }
+
+    To{
+        Opacity:1;
+        Transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    Header,
+    Footer{
+        Flex-direction:column;
+        Gap:20px;
+        Text-align:center;
+    }
+
+    .overlay{
+        Padding:20px;
+    }
+
+    .hero-text h2,
+    .course-hero h2{
+        Font-size:35px;
+    }
+
+    .hero-text p,
+    .course-hero p{
+        Width:100%;
+    }
+}
